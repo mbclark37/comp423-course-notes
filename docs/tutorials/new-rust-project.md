@@ -25,6 +25,12 @@ In this tutorial, you will learn how to create a new project, write a basic "Hel
     ```
 
 ## Build and Run the Program
+Before attempting to compile and run the project, it is important to ensure you are in the correct diretory, or else the build will be unsuccessful. Run the following code in your terminal.
+
+```bash
+    cd /workspaces/rust-dev-container/hello_comp423
+```
+
 ### Using `cargo build`
 1. Compile the program: 
     ```
