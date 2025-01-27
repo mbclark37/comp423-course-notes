@@ -1,9 +1,10 @@
-# Setting Up a Dev Container for Rust and Creating a Project
+# Creating Your First Rust Project!
 
 * Primary author: [Maddie Clark](https://github.com/mbclark37)
 
 * Reviewer: [Lucy Good](https://github.com/lucykgood)
 
+## Setting Up Your Development Environment
 To set up a Dev Container for Rust, you must either have Docker downloaded or have an understanding of GitHub Codespaces.
 
 ??? note "What is Docker?"
@@ -11,11 +12,11 @@ To set up a Dev Container for Rust, you must either have Docker downloaded or ha
 
 ??? note "What are GitHub Codespaces?"
     A GitHub Codespace is an environment where one can develop their programs and have them remain in the cloud.
-## Step 1: Start a Blank Directory and Initialize Git
+### Step 1: Start a Blank Directory and Initialize Git
 1. Open your terminal.
 2. Navigate to where you want this project to reside on your machine.
 3. Create a new directory and navigate to it:
-    ``` bash title="direcory-setup.bash"    
+    ``` bash title="directory-setup.bash"    
             mkdir rust-dev-container
             cd rust-dev-container  
     ```
@@ -24,9 +25,9 @@ To set up a Dev Container for Rust, you must either have Docker downloaded or ha
             git init
     ```
 
-## Step 2: Configure the Dev Container
-1. Download VSCode (if not already installed on device) and open the created directory via the file tab.
-3. Add a Dev Container configuration file to your directory named .devcontainer.json and input the following code:
+### Step 2: Configure the Dev Container
+1. Download VSCode (if not already installed on device) and open the created directory via the file tab on your menu bar.
+2. Add a Dev Container configuration file to your directory named .devcontainer.json and input the following code:
 
     ```json title="dev-setup.json"
         {
@@ -42,17 +43,17 @@ To set up a Dev Container for Rust, you must either have Docker downloaded or ha
         }
     ```
     ??? note "Dev Setup Explanations"
-        *  name: Pick something (human readable) to identitfy your development environment. Make sure it's unique and differentiable from any other environments you have.
+        *  name: Pick something (human readable) to identitfy your development environment. Make sure it's unique from any other environments you have.
         * image: `mcr.microsoft.com/devcontainers/rust:latest` is an official Microsoft Rust development container image. You can explore Microsoft's collection [here](https://hub.docker.com/r/microsoft/vscode-devcontainers).
-        * customizations.vscode.extension: A list of VSCode extensions tht can help with development.
+        * customizations.vscode.extensions: A list of VSCode extensions that can help with development.
 
 
-## Step 3: Start the Dev Container
-1. Open the Command Palette (`Ctrl + Shift + P` or `Cmd + Shift + P`) and search `Dev Containters: Reopen In Container` to reopen the folder in the Dev Container Environment.
-    * VSCode will rebuild the container and open the workspace inside.
+### Step 3: Start the Dev Container
+1. Open the Command Palette (`Ctrl + Shift + P` on Windows or `Cmd + Shift + P` on Mac), and search `Dev Containers: Reopen In Container` to reopen the folder in the Dev Container Environment.
+    * VSCode will rebuild the container and open your new workspace inside.
 
-## Step 4: Verify Proper Installation
-1. Open the terminal within the Dev Containter (`Ctrl + \`).
+### Step 4: Verify Proper Installation
+1. Open a new terminal within the Dev Container (`Ctrl + \`).
 2. Ensure a recent version of Rust is being used: 
     ```bash title="bash"
         rustc --version
@@ -65,7 +66,7 @@ To set up a Dev Container for Rust, you must either have Docker downloaded or ha
 
 Now it's time to learn how to create a new project, write a basic "Hello COMP423" program, compile, and run it!
 
-## Step 5: Creating a New Rust Project
+## Creating a New Rust Project
 1. Navigate to your previously configured directory in VSCode and open a terminal (`Ctrl + \`).
 2. Use Cargo to create a new Rust project:
     ``` rust title="project-setup.rust"
@@ -78,7 +79,7 @@ Now it's time to learn how to create a new project, write a basic "Hello COMP423
 
    
 
-## Step 6: Write the "Hello COMP423" Program
+### Step 1: Write the "Hello COMP423" Program
 1. Open `src/main.rs` in the `hello_comp423` folder.
 2. Replace the contents with the following code: 
     ```rust title="hello-comp423.rust"
@@ -87,14 +88,14 @@ Now it's time to learn how to create a new project, write a basic "Hello COMP423
         }
     ```
 
-## Step 7: Build and Run the Program
-Before attempting to compile and run the project, it is important to ensure you are in the correct diretory, or else the build will be unsuccessful. Run the following code in your terminal.
+### Step 2: Build and Run the Program
+Before attempting to compile and run the project, it is important to ensure you are in the correct directory, or else the build will be unsuccessful. Run the following code in your terminal.
 
 ```bash
     cd /workspaces/rust-dev-container/hello_comp423
 ```
 
-### Using `cargo build`
+#### Using `cargo build`
 1. Compile the program: 
     ```
         cargo build
@@ -116,7 +117,7 @@ Before attempting to compile and run the project, it is important to ensure you 
     ``` 
         Hello COMP423
     ```
-### Using `cargo run`
+#### Using `cargo run`
 1. Use the `cargo run` command to compile and run the program in one step:
 
     ```
@@ -134,8 +135,13 @@ Before attempting to compile and run the project, it is important to ensure you 
     !!! note
         `cargo build` only compiles the program, leaving the compiled file for later execution. `cargo run` does both, combining both the compilation and the execution of a file into a single command.
 
+## Success!
+Make a commit with your new changes using Git by writing these lines of code in your terminal in VSCode.
 
+``` git
+    cd rust-dev-container
+    git add .
+    git commit -m "Insert descriptive message for your changes here."
+```
 
-
-
-
+Congratulations! You have just written your first Rust project!
