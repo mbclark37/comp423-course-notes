@@ -63,6 +63,8 @@ To set up a Dev Container for Rust, you must either have Docker downloaded or ha
     ```
     This verifies a recent version.
 
+ntainer, navigate to [Creating a New Rust Project](http://127.0.0.1:8000/tutorials/new-rust-project/).
+
 Now it's time to learn how to create a new project, write a basic "Hello COMP423" program, compile, and run it!
 
 ## Step 5: Creating a New Rust Project
@@ -133,6 +135,7 @@ Before attempting to compile and run the project, it is important to ensure you 
     ```
     !!! note
         `cargo build` only compiles the program, leaving the compiled file for later execution. `cargo run` does both, combining both the compilation and the execution of a file into a single command.
+
 
 
 
